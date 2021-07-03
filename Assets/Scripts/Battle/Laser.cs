@@ -1,14 +1,15 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace Kosmos6
 {
     [RequireComponent(typeof(LineRenderer))]
-    public class Laser : MonoBehaviour
+    public class Laser : MonoBehaviour, IWeapon
     {
         public bool CanFire;
         public float MaxDistance = 100f;
-        public float Damage = 5f;
+        public float DamageAmount = 5f;
 
         private Coroutine _coroutineFiring;
         private WaitForSeconds _waitForFiring;
@@ -17,6 +18,8 @@ namespace Kosmos6
         [Header("Links")]
         [SerializeField] private LineRenderer _lineRenderer;
         private ShipWeapons _ShipWeapons;
+
+        public List<IDamageable> TargetHit = new List<IDamageable>();
 
         private void Awake()
         {
@@ -41,15 +44,7 @@ namespace Kosmos6
             CanFire = true;
         }
 
-        // Update is called once per frame
-        void Update()
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                Vector3 targetPosition = FireWeapon(transform.position + transform.forward * MaxDistance);
-                VisualizeFiringWeapon(targetPosition);
-            }
-        }
+
 
         public Vector3 FireWeapon(Vector3 targetPosition)
         {
@@ -62,17 +57,32 @@ namespace Kosmos6
                 if (targetHit != null)
                 {
                     Debug.Log($"FireWeapon targetHit: {targetHit.name}");
-                    targetHit.GetComponent<IDamageable>()?.ReceiveDamage(Damage, targetHit.position, _ShipWeapons._SpaceShip.ShipAgent);
-                    //Destroy(targetHit.gameObject);
+                    var damagebleHit = targetHit.GetComponent<IDamageable>();
+                    if (damagebleHit != null)
+                    {
+                        TargetHit.Add(damagebleHit);
+                        Damage(DamageAmount, targetHit.position, _ShipWeapons._SpaceShip.ShipAgent);
+                    }
+                    VisualizeFiring(targetHit.position);
                     return targetHit.position;
                 }
             }
 
             //if nothing weas hit
+            VisualizeFiring(transform.position + direction.normalized * MaxDistance);
             return targetPosition;
         }
 
-        public void VisualizeFiringWeapon(Vector3 targetPosition)
+        public void Damage(float damageAmount, Vector3 targetHitPosition, GameAgent sender)
+        {
+            foreach (var targetHit in TargetHit)
+            {
+                targetHit.ReceiveDamage(damageAmount, targetHitPosition, sender);
+            }
+            TargetHit.Clear();
+        }
+
+        public void VisualizeFiring(Vector3 targetPosition)
         {
             if (CanFire)
             {
