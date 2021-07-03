@@ -8,7 +8,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <ProjectGuid>{1278F7A7-812B-940F-5DC3-BD234CDB2EE6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -143,7 +144,7 @@
     <Compile Include="C:\Program Files\Unity\Hub\Editor\2020.3.9f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\EventSystem\RaycasterManager.cs" />
   </ItemGroup>
   <ItemGroup>
-     <None Include="C:\Program Files\Unity\Hub\Editor\2020.3.9f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UnityEngine.UI.asmdef" />
+    <None Include="C:\Program Files\Unity\Hub\Editor\2020.3.9f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UnityEngine.UI.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.3.9f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
