@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637592132411308635
-    m_Hash: 3288995077
+      ticks: 637613654957989742
+    m_Hash: 340084412
   m_LockFileStatus:
     m_FilePath: C:/Users/Nikolaj/Documents/unity_game/game_space/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637592132975868152
-    m_Hash: 860447179
+      ticks: 637613654966369514
+    m_Hash: 4244654261
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -380,12 +380,12 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ide.vscode.git
         revision: b5ec9b38109e52b1b26597d521e4df75e042ebb9
         path: 
-    - packageId: com.unity.render-pipelines.universal@10.5.0
+    - packageId: com.unity.render-pipelines.universal@10.5.1
       testable: 0
       isDirectDependency: 1
-      version: 10.5.0
+      version: 10.5.1
       source: 1
-      resolvedPath: C:\Users\Nikolaj\Documents\unity_game\game_space\Library\PackageCache\com.unity.render-pipelines.universal@10.5.0
+      resolvedPath: C:\Users\Nikolaj\Documents\unity_game\game_space\Library\PackageCache\com.unity.render-pipelines.universal@10.5.1
       assetPath: Packages/com.unity.render-pipelines.universal
       name: com.unity.render-pipelines.universal
       displayName: Universal RP
@@ -421,6 +421,7 @@ m_PackageAssets:
         - 7.5.2
         - 7.5.3
         - 7.6.0
+        - 7.7.0
         - 8.0.1
         - 8.1.0
         - 8.2.0
@@ -438,21 +439,23 @@ m_PackageAssets:
         - 10.3.2
         - 10.4.0
         - 10.5.0
+        - 10.5.1
         compatible:
         - 10.5.0
-        verified: 10.5.0
+        - 10.5.1
+        verified: 10.5.1
       dependencies:
       - name: com.unity.mathematics
         version: 1.1.0
       - name: com.unity.render-pipelines.core
-        version: 10.5.0
+        version: 10.5.1
       - name: com.unity.shadergraph
-        version: 10.5.0
+        version: 10.5.1
       resolvedDependencies:
       - name: com.unity.mathematics
         version: 1.1.0
       - name: com.unity.render-pipelines.core
-        version: 10.5.0
+        version: 10.5.1
       - name: com.unity.ugui
         version: 1.0.0
       - name: com.unity.modules.ui
@@ -460,7 +463,7 @@ m_PackageAssets:
       - name: com.unity.modules.imgui
         version: 1.0.0
       - name: com.unity.shadergraph
-        version: 10.5.0
+        version: 10.5.1
       - name: com.unity.searcher
         version: 4.3.2
       keywords:
@@ -482,13 +485,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637550685770000000
+      datePublishedTicks: 637605794350000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: git+https://github.com/Unity-Technologies/Graphics.git
-        revision: 7ff8fd444c179fd9bb380d61f4865be6935b47dd
+        revision: 73f32e8fcc2d0cbf3b73a16a5e30eb5cede41576
         path: 
     - packageId: com.unity.test-framework@1.1.24
       testable: 0
@@ -539,10 +542,12 @@ m_PackageAssets:
         - 1.1.22
         - 1.1.24
         - 1.1.26
+        - 1.1.27
         compatible:
         - 1.1.24
         - 1.1.26
-        verified: 1.1.26
+        - 1.1.27
+        verified: 1.1.27
       dependencies:
       - name: com.unity.ext.nunit
         version: 1.0.6
@@ -818,6 +823,7 @@ m_PackageAssets:
         - 1.6.0-pre.3
         - 1.6.0-pre.4
         - 1.6.0-pre.5
+        - 1.6.1
         compatible:
         - 1.4.8
         - 1.5.0-pre.2
@@ -836,6 +842,7 @@ m_PackageAssets:
         - 1.6.0-pre.3
         - 1.6.0-pre.4
         - 1.6.0-pre.5
+        - 1.6.1
         verified: 1.4.8
       dependencies:
       - name: com.unity.modules.director
@@ -2707,8 +2714,18 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 0.1.5-preview
+        - 0.1.6-preview
+        - 0.1.9-preview
+        - 1.0.0
+        - 1.0.5
         - 1.0.6
         compatible:
+        - 0.1.5-preview
+        - 0.1.6-preview
+        - 0.1.9-preview
+        - 1.0.0
+        - 1.0.5
         - 1.0.6
         verified: 1.0.6
       dependencies: []
@@ -2729,7 +2746,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637429759280000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -2758,9 +2775,33 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 0.0.12-preview.2
+        - 0.0.12-preview.5
+        - 0.0.12-preview.8
+        - 0.0.12-preview.10
+        - 0.0.12-preview.11
+        - 0.0.12-preview.13
+        - 0.0.12-preview.17
+        - 0.0.12-preview.19
+        - 0.0.12-preview.20
+        - 1.0.0-preview.1
+        - 1.0.1
+        - 1.1.0-preview.1
         - 1.1.0
         - 1.2.1
         compatible:
+        - 0.0.12-preview.2
+        - 0.0.12-preview.5
+        - 0.0.12-preview.8
+        - 0.0.12-preview.10
+        - 0.0.12-preview.11
+        - 0.0.12-preview.13
+        - 0.0.12-preview.17
+        - 0.0.12-preview.19
+        - 0.0.12-preview.20
+        - 1.0.0-preview.1
+        - 1.0.1
+        - 1.1.0-preview.1
         - 1.1.0
         - 1.2.1
         verified: 1.2.1
@@ -2780,7 +2821,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 636984649280000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -2788,12 +2829,12 @@ m_PackageAssets:
         url: git@github.com:Unity-Technologies/Unity.Mathematics.git
         revision: 0a3dfafaf606098ea681de4c4be60f3aac63b773
         path: 
-    - packageId: com.unity.render-pipelines.core@10.5.0
+    - packageId: com.unity.render-pipelines.core@10.5.1
       testable: 0
       isDirectDependency: 0
-      version: 10.5.0
+      version: 10.5.1
       source: 1
-      resolvedPath: C:\Users\Nikolaj\Documents\unity_game\game_space\Library\PackageCache\com.unity.render-pipelines.core@10.5.0
+      resolvedPath: C:\Users\Nikolaj\Documents\unity_game\game_space\Library\PackageCache\com.unity.render-pipelines.core@10.5.1
       assetPath: Packages/com.unity.render-pipelines.core
       name: com.unity.render-pipelines.core
       displayName: Core RP Library
@@ -2884,6 +2925,7 @@ m_PackageAssets:
         - 7.5.2
         - 7.5.3
         - 7.6.0
+        - 7.7.0
         - 8.0.1
         - 8.1.0
         - 8.2.0
@@ -2902,9 +2944,11 @@ m_PackageAssets:
         - 10.3.2
         - 10.4.0
         - 10.5.0
+        - 10.5.1
         compatible:
         - 10.5.0
-        verified: 10.5.0
+        - 10.5.1
+        verified: 10.5.1
       dependencies:
       - name: com.unity.ugui
         version: 1.0.0
@@ -2928,20 +2972,20 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637550675510000000
+      datePublishedTicks: 637605791650000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: git+https://github.com/Unity-Technologies/Graphics.git
-        revision: 7ff8fd444c179fd9bb380d61f4865be6935b47dd
+        revision: 73f32e8fcc2d0cbf3b73a16a5e30eb5cede41576
         path: 
-    - packageId: com.unity.shadergraph@10.5.0
+    - packageId: com.unity.shadergraph@10.5.1
       testable: 0
       isDirectDependency: 0
-      version: 10.5.0
+      version: 10.5.1
       source: 1
-      resolvedPath: C:\Users\Nikolaj\Documents\unity_game\game_space\Library\PackageCache\com.unity.shadergraph@10.5.0
+      resolvedPath: C:\Users\Nikolaj\Documents\unity_game\game_space\Library\PackageCache\com.unity.shadergraph@10.5.1
       assetPath: Packages/com.unity.shadergraph
       name: com.unity.shadergraph
       displayName: Shader Graph
@@ -3030,6 +3074,7 @@ m_PackageAssets:
         - 7.5.2
         - 7.5.3
         - 7.6.0
+        - 7.7.0
         - 8.0.1
         - 8.1.0
         - 8.2.0
@@ -3047,17 +3092,19 @@ m_PackageAssets:
         - 10.3.2
         - 10.4.0
         - 10.5.0
+        - 10.5.1
         compatible:
         - 10.5.0
-        verified: 10.5.0
+        - 10.5.1
+        verified: 10.5.1
       dependencies:
       - name: com.unity.render-pipelines.core
-        version: 10.5.0
+        version: 10.5.1
       - name: com.unity.searcher
         version: 4.3.2
       resolvedDependencies:
       - name: com.unity.render-pipelines.core
-        version: 10.5.0
+        version: 10.5.1
       - name: com.unity.ugui
         version: 1.0.0
       - name: com.unity.modules.ui
@@ -3079,13 +3126,13 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 637550676160000000
+      datePublishedTicks: 637605793850000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
         url: git+https://github.com/Unity-Technologies/Graphics.git
-        revision: 7ff8fd444c179fd9bb380d61f4865be6935b47dd
+        revision: 73f32e8fcc2d0cbf3b73a16a5e30eb5cede41576
         path: 
     - packageId: com.unity.searcher@4.3.2
       testable: 0
@@ -3108,9 +3155,35 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 4.0.0-preview
+        - 4.0.0
+        - 4.0.7-preview
+        - 4.0.7
+        - 4.0.8-preview
+        - 4.0.9
+        - 4.1.0-preview
+        - 4.1.0
+        - 4.2.0
+        - 4.3.0
+        - 4.3.1
         - 4.3.2
+        - 4.6.0-preview
+        - 4.7.0-preview
         compatible:
+        - 4.0.0-preview
+        - 4.0.0
+        - 4.0.7-preview
+        - 4.0.7
+        - 4.0.8-preview
+        - 4.0.9
+        - 4.1.0-preview
+        - 4.1.0
+        - 4.2.0
+        - 4.3.0
+        - 4.3.1
         - 4.3.2
+        - 4.6.0-preview
+        - 4.7.0-preview
         verified: 4.3.2
       dependencies: []
       resolvedDependencies: []
@@ -3129,7 +3202,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637509898070000000
       documentationUrl: 
       hasRepository: 1
       repository:
