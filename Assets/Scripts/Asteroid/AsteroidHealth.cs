@@ -2,10 +2,18 @@ using UnityEngine;
 
 public class AsteroidHealth : MonoBehaviour, IDamageable
 {
-    public float Health { get; }
-
+    public float Health { get; set; }
+    [SerializeField] private GameObject PrefabEffectDestr;
     public void ReceiveDamage(float damageAmount, Vector3 hitPosition, GameAgent sender)
     {
+        Health -= damageAmount;
+        if (Health <= 0)
+        {
+            if (PrefabEffectDestr)
+            {
+                Instantiate(PrefabEffectDestr, transform.position, Quaternion.identity);
+            }
+        }
         Destroy(gameObject);
     }
 
