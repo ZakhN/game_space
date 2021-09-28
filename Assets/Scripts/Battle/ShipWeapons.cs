@@ -3,50 +3,53 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-public class ShipWeapons : MonoBehaviour
+namespace Kosmos6
 {
-    public SpaceShip _SpaceShip;
-
-    public List<IWeapon> Weapons = new List<IWeapon>();
-    public float MaxDistanceToTarget = 250f;
-    private void Awake()
+    public class ShipWeapons : MonoBehaviour
     {
-        if (_SpaceShip == null)
+        public SpaceShip _SpaceShip;
+
+        public List<IWeapon> Weapons = new List<IWeapon>();
+        public float MaxDistanceToTarget = 250f;
+        private void Awake()
         {
-            _SpaceShip = GetComponentInParent<SpaceShip>();
-        }
-
-        Weapons = GetComponentsInChildren<IWeapon>().ToList();
-    }
-
-    private void Update()
-    {
-        if(Input.GetMouseButton(0))
-        {
-            FireWeapons();
-        }
-    }
-
-    public void FireWeapons()
-    {
-        RaycastHit hit;
-        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
-
-        if (Physics.Raycast(ray, out hit, MaxDistanceToTarget))
-        {
-            foreach (var weapon in Weapons)
+            if (_SpaceShip == null)
             {
-                weapon.FireWeapon(hit.point);
-                //weapon.FireWeapon(transform.position + transform.forward * MaxDistanceToTarget);
-
+                _SpaceShip = GetComponentInParent<SpaceShip>();
             }
-        } else
+
+            Weapons = GetComponentsInChildren<IWeapon>().ToList();
+        }
+
+        private void Update()
         {
-            foreach (var weapon in Weapons)
+            if (Input.GetMouseButton(0))
             {
-                weapon.FireWeapon(ray.origin + ray.direction * MaxDistanceToTarget);
+                FireWeapons();
+            }
+        }
+
+        public void FireWeapons()
+        {
+            RaycastHit hit;
+            Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+
+            if (Physics.Raycast(ray, out hit, MaxDistanceToTarget))
+            {
+                foreach (var weapon in Weapons)
+                {
+                    weapon.FireWeapon(hit.point);
+                    //weapon.FireWeapon(transform.position + transform.forward * MaxDistanceToTarget);
+
+                }
+            }
+            else
+            {
+                foreach (var weapon in Weapons)
+                {
+                    weapon.FireWeapon(ray.origin + ray.direction * MaxDistanceToTarget);
+                }
             }
         }
     }
 }
-

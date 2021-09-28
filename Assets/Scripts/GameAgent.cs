@@ -1,13 +1,16 @@
 using UnityEngine;
 
-public class GameAgent : MonoBehaviour
+namespace Kosmos6
 {
-    public enum Fraction
+    public class GameAgent : MonoBehaviour
     {
-        Player,
-        Allies,
-        SevenStart
-    }
+        public enum Fraction
+        {
+            Player,
+            Allies,
+            SevenStart
+        }
 
-    public Fraction ShipFraction;
+        public Fraction ShipFraction;
+    }
 }

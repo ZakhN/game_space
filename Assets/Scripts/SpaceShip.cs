@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpaceShip : MonoBehaviour
+namespace Kosmos6
 {
-    public GameAgent ShipAgent;
-
-    private void Awake()
+    public class SpaceShip : MonoBehaviour
     {
-        if (ShipAgent == null)
+        public GameAgent ShipAgent;
+
+        private void Awake()
         {
-            ShipAgent = GetComponent<GameAgent>();
+            if (ShipAgent == null)
+            {
+                ShipAgent = GetComponent<GameAgent>();
+            }
         }
     }
 }

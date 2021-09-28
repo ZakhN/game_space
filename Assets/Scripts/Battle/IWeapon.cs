@@ -1,8 +1,11 @@
 using UnityEngine;
 
-public interface IWeapon
+namespace Kosmos6
 {
-    public Vector3 FireWeapon(Vector3 targetPosition);
-    void VisualizeFiring(Vector3 targetPosition);
-    public void Damage(float damageAmount, Vector3 targetHitPosition, GameAgent sender);
+    public interface IWeapon
+    {
+        public Vector3 FireWeapon(Vector3 targetPosition);
+        void VisualizeFiring(Vector3 targetPosition);
+        public void Damage(float damageAmount, Vector3 targetHitPosition, GameAgent sender);
+    }
 }

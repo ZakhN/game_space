@@ -126,3 +126,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PrefabEffectDestr: {fileID: 7224339176894354679, guid: a7e66febce55a974285650557b578d6c, type: 3}
+  PrefabAsteroidDivision: {fileID: 1345170860230030987, guid: 4241a0dd6a4c1554585c0b749627ea11, type: 3}
